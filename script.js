@@ -37,13 +37,13 @@ var max = 17;
 var randNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 var counter = 1;
 
-var quheads = "https://i.imgur.com/7nwisjG.png";
-var qutails = "https://i.imgur.com/ErnbY1Q.png";
+// Remplacez les URLs des images par vos propres fichiers
+var quheads = "logo.png"; // Image pour la face (logo)
+var qutails = "tail.png"; // Image pour la pile (taille)
 var myimg = document.querySelector("#myimg");
 var result = document.querySelector("#result");
-var posrotInterval, negrotInterval;
 
-//css way
+// Écouteur d'événement pour le clic sur l'image
 myimg.addEventListener("click", function() {
     counter = 1;
     toggler = false;
@@ -52,17 +52,19 @@ myimg.addEventListener("click", function() {
     randNumber = Math.floor(Math.random() * (max - min + 1)) + min;
     myimg.style.transform = "rotateY(89deg)";
     if (initRun) {
-        myimg.src = (myimg.src == quheads) ? qutails : quheads;
+        // Choisir l'image initiale à afficher
+        myimg.src = (myimg.src.includes(quheads)) ? qutails : quheads;
         initRun = false;
     }
 
 }, false);
 
+// Écouteur d'événement pour la fin de l'animation de transition
 myimg.addEventListener("transitionend", function () {
     if (counter < randNumber) {
         toggler = !toggler;
         if (toggler) {
-            myimg.src = (myimg.src == quheads) ? qutails : quheads;
+            myimg.src = (myimg.src.includes(quheads)) ? qutails : quheads;
             myimg.style.transform = "rotateY(0deg)";
             degflag = false;
         }
@@ -75,18 +77,18 @@ myimg.addEventListener("transitionend", function () {
     else {
         if (degflag && !enddegflag) {
             myimg.style.transform = "rotateY(0deg)";
-            myimg.src = (myimg.src == quheads) ? qutails : quheads;
+            myimg.src = (myimg.src.includes(quheads)) ? qutails : quheads;
             enddegflag = true;
         }
         else {
-
-            if (myimg.src == quheads) {
-                result.innerHTML = "HEADS";
-                result.style.color = "#00aaff";
+            // Déterminer le résultat en fonction de l'image affichée
+            if (myimg.src.includes(quheads)) {
+                result.innerHTML = "HEAD";
+                result.style.color = "#9400FF"; // Couleur pour face
             }
             else {
-                result.innerHTML = "TAILS";
-                result.style.color = "#cc0000";
+                result.innerHTML = "TAIL";
+                result.style.color = "#cc0000"; // Couleur pour pile
             }
         }
     }
