@@ -2,17 +2,246 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberHacker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<img id="myimg" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/2006_Quarter_Proof.png" alt="Quarter heads">
-<!--iimg id="myimg" src="http://www.marcusparsons.com/projects/coinflip/img/pokeheads.png"-->
-<br>
-<p id="rp">You flipped <span id="result">nothing yet</span></p>
-<p id="ltp">Last flip: <span id="lasttime">Nothing yet</span></p>
-<p style="color: white; text-align: center; font-size: 1.25em;">For an updated version of this coinflip app (that looks best on mobile devices), check out <a style="color: aqua;" href="http://www.marcusparsons.com/projects/coinflip/" target="_blank">My Coinflip App</a> on my main website.</p>
+<header>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="#" data-target="rules">Rules</a></li>
+            <li><a href="#" data-target="wiki">Wiki</a></li>
+            <li><a href="#" data-target="coin">Coin Flip</a></li>
+        </ul>
+    </nav>
+</header>
+<nav class="content-section wiki">
+    <ul class="category-list">
+        <li><a href="#clue">Clue</a></li>
+        <li><a href="#offensive">Offensive</a></li>
+        <li><a href="#defensive">Defensive</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a href="#malware">Malware</a></li>
+    </ul>
+</nav>
+<main>
+    <section class="content-section rules active">
+        <h1>Welcome to CyberHacker</h1>
+        <p>Game rules</p>
+    </section>
+    <section class="content-section wiki">
+        <h1>Terms explanation</h1>
+        <h2 id="clue">Clue Cards</h2>
+        <article>
+            <h3>Database Vulnerability Test</h3>
+            <p>
+                A database vulnerability test is the process of scanning and analyzing a database for potential
+                weaknesses that could be exploited by attackers. This includes checking for insecure configurations,
+                outdated software, weak passwords, or exposed sensitive data. Regular vulnerability testing helps
+                identify risks and improve database security.A database vulnerability test is the process of scanning
+                and analyzing a database for potential weaknesses that could be exploited by attackers. This includes
+                checking for insecure configurations, outdated software, weak passwords, or exposed sensitive data.
+                Regular vulnerability testing helps identify risks and improve database security.
+            </p>
+        </article>
+        <article>
+            <h3>Shoulder Surfing</h3>
+            <p>
+                Shoulder surfing is a type of social engineering attack where an attacker observes someone’s screen or
+                input devices, like a keyboard, to steal sensitive information such as passwords, PINs, or other
+                personal details. This can occur in public spaces, and measures like privacy screens or being mindful of
+                your surroundings can help protect against it.
+            </p>
+        </article>
+        <article>
+            <h3></h3>
+            <p>
 
-<script src="scripts.js"></script>
+            </p>
+        </article>
+        <h2 id="offensive">Offensive Cards</h2>
+        <article>
+            <h3>Brute Force SSH</h3>
+            <p>
+                A brute force SSH attack is when a hacker repeatedly tries different username and password combinations
+                to access a server via SSH. It's like trying every possible key to unlock a door. This attack exploits
+                weak
+                or default credentials, and securing servers with strong passwords or SSH keys helps protect against
+                it.
+            </p>
+        </article>
+        <article>
+            <h3>Phishing Mail</h3>
+            <p>
+                A phishing email is a fake message designed to trick you into revealing personal information, like
+                passwords
+                or credit card details. It often pretends to be from a trusted organization, like a bank or a well-known
+                company, and may include urgent language or fake links to steal your data.
+            </p>
+        </article>
+        <article>
+            <h3>USB Drive Infection</h3>
+            <p>
+                A USB drop attack happens when a malicious USB drive is left in a public place, hoping someone will plug
+                it
+                into their computer. Once connected, the USB can install malware or steal data automatically. It's a
+                reminder never to trust unknown USB drives.
+            </p>
+        </article>
+        <article>
+            <h3>Command Injection</h3>
+            <p>
+                Command injection is a cyberattack where a hacker tricks an application into executing system-level
+                commands
+                by exploiting poorly secured input fields. This allows the attacker to take control of the system, steal
+                data, or cause damage. Validating and sanitizing user inputs helps prevent such attacks.
+            </p>
+        </article>
+        <article>
+            <h3>Privileged User Session</h3>
+            <p>
+                Privilege escalation is when an attacker gains unauthorized access to a privileged user account, like an
+                admin or root account. This gives them full control over a system, allowing them to modify settings,
+                steal
+                data, or deploy malware. Strong access controls and regular privilege audits can help mitigate this
+                risk.
+            </p>
+        </article>
+        <article>
+            <h3>Physic Infrastructure Sabotage</h3>
+            <p>
+                Physical infrastructure sabotage involves intentionally damaging or disrupting critical systems, like
+                servers, power grids, or data centers. This can result in service outages, data loss, or even safety
+                hazards. Securing physical access to infrastructure and monitoring for suspicious activity are key
+                defenses.
+            </p>
+        </article>
+        <article>
+            <h3>DDoS Attack</h3>
+            <p>
+                A DDoS (Distributed Denial of Service) attack is when multiple compromised computers or devices are used
+                to flood a server, network, or website with excessive traffic, overwhelming it and causing it to become
+                slow, unresponsive, or completely unavailable. The goal is to disrupt services, often for malicious
+                purposes or to extort the targeted organization.
+            </p>
+        </article>
+        <article>
+            <h3>SQL Injection</h3>
+            <p>
+                SQL injection is a type of cyberattack where an attacker inserts or manipulates malicious SQL queries
+                into input fields (like login forms) to access or manipulate a database. This can lead to unauthorized
+                data access, data loss, or even complete control over the database. Proper input validation and using
+                parameterized queries are key defenses against SQL injection.
+            </p>
+        </article>
+        <h2 id="defensive">Defensive Cards</h2>
+        <article>
+            <h3>Smart Firewall</h3>
+            <p>
+                A smart firewall, or next-generation firewall (NGFW), is an advanced security tool that not only blocks
+                unauthorized network traffic but also analyzes it in real-time. It uses features like deep packet
+                inspection, intrusion prevention, and machine learning to detect and block sophisticated cyber threats.
+            </p>
+        </article>
+        <article>
+            <h3>Employee Awareness Training</h3>
+            <p>
+                Employee awareness training is the process of educating staff about security risks and best practices to
+                prevent cyberattacks. This includes teaching them how to recognize phishing emails, create strong
+                passwords,
+                and follow company security policies. It helps reduce human error, which is often the weakest link in
+                cybersecurity.
+            </p>
+        </article>
+        <article>
+            <h3>Anomaly Detection</h3>
+            <p>
+                Anomaly detection is the process of identifying unusual patterns or behaviors in network traffic, system
+                logs, or user activities that may indicate a potential security threat. It uses advanced algorithms and
+                machine learning to spot deviations from normal behavior, helping to detect cyberattacks or breaches
+                early.
+            </p>
+        </article>
+        <article>
+            <h3>Session Monitoring System</h3>
+            <p>
+                A session monitoring system tracks and records user activities during their interaction with a system or
+                application. It helps detect suspicious behavior, unauthorized access, or potential security breaches by
+                providing real-time visibility into user actions, such as login times, accessed data, and commands
+                executed.
+                This can improve security and ensure compliance.
+            </p>
+        </article>
+        <h2 id="support">Support Cards</h2>
+        <article>
+            <h3>Mass Phishing Wave</h3>
+            <p>
+                A mass phishing wave refers to a large-scale phishing attack where cybercriminals send fraudulent emails
+                to thousands or even millions of recipients in an attempt to steal sensitive information like login
+                credentials or financial details. These attacks are often disguised as urgent or legitimate requests
+                from trusted sources, making them difficult to spot.
+            </p>
+        </article>
+        <article>
+            <h3>Secure Proxy Network</h3>
+            <p>
+                A secure proxy network acts as an intermediary between users and the internet, hiding their IP addresses
+                and encrypting data traffic. It helps protect privacy, bypass restrictions, and shield systems from
+                direct exposure to cyber threats. Advanced secure proxies also monitor traffic to detect and block
+                malicious activity.
+            </p>
+        </article>
+        <article>
+            <h3>Data Encryption</h3>
+            <p>
+                Data encryption is the process of converting data into a coded format that can only be read or decrypted
+                by authorized parties with the correct decryption key. It protects sensitive information, such as
+                passwords or financial data, from being accessed by unauthorized individuals, ensuring privacy and
+                security both during transmission and storage.
+            </p>
+        </article>
+        <h2 id="malware">Malware Cards</h2>
+        <article>
+            <h3>Spyware</h3>
+            <p>
+                Spyware is a type of malicious software designed to secretly monitor and collect information about a
+                user's activities without their consent. It can track browsing habits, capture keystrokes, steal
+                sensitive data like passwords, and even control the infected device. Spyware is often installed through
+                deceptive methods, like bundled software or phishing attacks.
+            </p>
+        </article>
+        <article>
+            <h3>Ransomware</h3>
+            <p>
+                Ransomware is a type of malicious software that encrypts a victim's files or locks them out of their
+                system, demanding a ransom payment (often in cryptocurrency) in exchange for the decryption key or to
+                restore access. It can spread through phishing emails, malicious downloads, or vulnerabilities in the
+                system. The best defense is regular backups and security awareness.
+            </p>
+        </article>
+        <article>
+            <h3>Backdoor</h3>
+            <p>
+                A backdoor is a secret method of bypassing normal authentication or encryption in a system, allowing
+                unauthorized access to the system or network. It is often used by hackers to maintain access to a
+                compromised system even after the original security vulnerabilities are patched. Backdoors can be
+                installed via malware or by exploiting system weaknesses.
+            </p>
+        </article>
+    </section>
+    <section class="content-section hidden coin">
+        <h1>Coin Flip</h1>
+        <img id="myimg" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/2006_Quarter_Proof.png"
+             alt="Quarter heads">
+        <!--iimg id="myimg" src="http://www.marcusparsons.com/projects/coinflip/img/pokeheads.png"-->
+        <br>
+        <p id="rp">You flipped <span id="result">nothing yet</span></p>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 CyberHacker. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

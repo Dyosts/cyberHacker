@@ -1,3 +1,33 @@
+document.addEventListener("DOMContentLoaded", () => {
+    // Sélectionner tous les liens de navigation
+    const navLinks = document.querySelectorAll(".nav-list a");
+
+    // Ajouter des écouteurs d'événements pour chaque lien
+    navLinks.forEach(link => {
+        link.addEventListener("click", event => {
+            event.preventDefault(); // Empêcher le comportement par défaut du lien
+
+            // Récupérer la classe cible à partir de l'attribut data-target
+            const targetClass = event.target.getAttribute("data-target");
+
+            // Masquer tous les éléments avec la classe .wiki
+            document.querySelectorAll(".content-section").forEach(element => {
+                element.classList.remove("active");
+            });
+
+            // Afficher tous les éléments avec la classe cible
+            document.querySelectorAll(`.${targetClass}`).forEach(targetElement => {
+                targetElement.classList.add("active");
+            });
+        });
+    });
+});
+
+
+
+
+// COIN FLIP
+
 var initRun = true;
 var toggler = false;
 var degflag = false;
@@ -58,7 +88,6 @@ myimg.addEventListener("transitionend", function () {
                 result.innerHTML = "TAILS";
                 result.style.color = "#cc0000";
             }
-            document.querySelector("#lasttime").innerHTML = new Date().toLocaleString();
         }
     }
 }, false);
