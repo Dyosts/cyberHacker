@@ -1,164 +1,185 @@
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-.content-section {
-    display: none;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #E4F1FF;
+}
+html body .content-section {
+  display: none;
+}
+html body .content-section.active {
+  display: block;
+}
+html body header {
+  background: #27005D;
+  color: #ffffff;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+html body header #logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html body header #logo img {
+  width: 50px;
+  height: 50px;
+}
+html body header .nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+html body header .nav-list li {
+  margin: 0 1rem;
+}
+html body header .nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+html body header .nav-list a:hover {
+  text-decoration: underline;
+}
+html body .category-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #9400FF;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #333;
+  padding: 10px;
+  margin: 0;
+}
+html body .category-list a {
+  color: white !important;
+  text-decoration: none !important;
+}
+html body main {
+  padding: 2rem;
+}
+html body main section {
+  margin-bottom: 2rem;
+}
+html body main section h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+html body main section h2 {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+html body main section h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+html body main section p {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+html body main section .block {
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #bdbdbd;
+  margin-bottom: 1rem;
+}
+html body main section .block .sub-block {
+  box-shadow: 1px 1px 10px #bdbdbd;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+html body main section .block * {
+  font-family: "Lato", sans-serif;
+}
+html body main section .block h3 {
+  font-size: 1.1rem;
+}
+html body main section .block h4 {
+  font-size: 1rem;
+}
+html body main section .age {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html body main .coin {
+  text-align: center;
+}
+html body main .coin #coin-container #myimg {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  transform-style: preserve-3d;
+  transition: all 0.2s linear;
+}
+html body main .coin #coin-container #result {
+  font-weight: bold;
+}
+html body main .cards.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+html body main .cards.active img {
+  width: 100%;
+}
+html body main .cards.active .card-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+html body main .cards.active .card-list .flip-card {
+  background-color: transparent;
+  min-width: 300px;
+  height: 450px;
+  perspective: 1000px;
+}
+html body main .cards.active .card-list .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+html body main .cards.active .card-list .flip-card-inner .flip-card-front, html body main .cards.active .card-list .flip-card-inner .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+html body main .cards.active .card-list .flip-card-inner .flip-card-front {
+  color: black;
+}
+html body main .cards.active .card-list .flip-card-inner .flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+}
+html body main .cards.active .card-list .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-.content-section.active {
-    display: block;
-}
-
-/* Rest of your existing CSS */
-
-/* General Styles */
-body {
-    font-family: "DotGothic16", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: #E4F1FF;
-}
-
-/* Header and Navigation */
-header {
-    background: #27005D;
-    color: white;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.nav-list li {
-    margin: 0 1rem;
-}
-
-.nav-list a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.nav-list a:hover {
-    text-decoration: underline;
-}
-
-/* Main Content */
-main {
-    padding: 2rem;
-}
-
-section {
-    margin-bottom: 2rem;
-}
-
-h1, h3 {
-    color: #27005D;
-}
-
-h1 {
-    font-size: 1.5rem;
-    font-weight: 400;
-}
-
-h2 {
-    font-size: 1.3rem;
-    font-weight: 300;
-}
-
-h3 {
-    font-size: 1rem;
-    font-weight: 400;
-}
-
-p {
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-}
-
-.read-more:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    background: #27005D;
-    color: white;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-.category-list {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background: #9400FF;
-    color: white;
-    text-shadow: 1px  1px 1px black;
-    padding: 10px;
-    margin: 0;
-}
-
-.category-list a {
-    color: white!important;
-    text-decoration: none!important;
-}
-
-/* Coin Flip */
-
-#ltp {
-    margin-top: -1%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    text-align: center;
-}
-
-#myimg {
-    display: block;
-    margin: 0 auto;
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    transform-style: preserve-3d;
-    transition: all 0.2s linear;
-}
-
-#result {
-    font-weight: bold;
-}
-
-#rp {
-    margin-top: 0;
-    font-size: 28px;
-    text-align: center;
-}
-
-.coin {
-    text-align: center;
-}
-
-#logo img {
-    width: 50px;
-    height: 50px;
-}
-
-#logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/*# sourceMappingURL=styles.css.map */

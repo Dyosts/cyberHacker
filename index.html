@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberHacker</title>
+    <title>CYBERHACK'R</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
     <div id="logo">
         <img src="logo.png" alt="logo">
-        CyberHacker
+        CYBERHACK'R
     </div>
     <nav>
         <ul class="nav-list">
             <li><a href="#" data-target="rules">Rules</a></li>
             <li><a href="#" data-target="wiki">Wiki</a></li>
             <li><a href="#" data-target="coin">Coin Flip</a></li>
+            <li><a href="#" data-target="cards">Cards</a></li>
         </ul>
     </nav>
 </header>
@@ -31,8 +32,42 @@
 </nav>
 <main>
     <section class="content-section rules active">
-        <h1>Welcome to CyberHacker</h1>
+        <h1>CYBERHACK'R</h1>
         <h2>Game rules</h2>
+        <div class="block age">
+            <p>Age</p>
+            <p>From 12 to 99+</p>
+        </div>
+        <div class="block">
+            <h3>What's inside the box ?</h3>
+            <ul>
+                <li>A board</li>
+                <li>Different themes of cards</li>
+            </ul>
+        </div>
+        <div class="block">
+            <h3>The different types of cards</h3>
+            <div class="sub-block">
+                <h4>Offensive</h4>
+                <p>Allows you to go forward in the game</p>
+            </div>
+            <div class="sub-block">
+                <h4>Defensive</h4>
+                <p>Allows you to block the opponent</p>
+            </div>
+            <div class="sub-block">
+                <h4>Clue</h4>
+                <p>Will give you information on points you can gain on the board</p>
+            </div>
+            <div class="sub-block">
+                <h4>Malware</h4>
+                <p>Will allow you to win some points if you place them at the right place</p>
+            </div>
+            <div class="sub-block">
+                <h4>Support</h4>
+                <p>Allows you to break your chains from the defense placed on you</p>
+            </div>
+        </div>
     </section>
     <section class="content-section wiki">
         <h1>Terms explanation</h1>
@@ -234,17 +269,48 @@
             </p>
         </article>
     </section>
-    <section class="content-section hidden coin">
+    <section class="content-section coin">
         <h1>Coin Flip</h1>
         <div id="coin-container">
             <img id="myimg" src="logo.png" alt="Coin Image">
         </div>
         <div class="result" id="result">Click on the coin to flip it !</div>
     </section>
+    <section class="content-section cards">
+        <div class="card-list">
+            <div class="flip-card offensive">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/cards/phishing-mail-front.png" alt="Phishing Mail">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="./assets/cards/phishing-mail-back.png" alt="Phishing Mail">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card defensive">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/cards/employee-sensibilisation-front.png" alt="Employee Sensibilisation">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="./assets/cards/employee-sensibilisation-back.png" alt="Employee Sensibilisation">
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card support">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="./assets/cards/mass-phishing-front.png" alt="Massive Phishing Wave">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="./assets/cards/mass-phishing-back.png" alt="Massive Phishing Wave">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
-<footer>
-    <p>&copy; 2024 CyberHacker. All rights reserved.</p>
-</footer>
 <script src="script.js"></script>
 </body>
 </html>

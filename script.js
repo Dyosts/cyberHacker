@@ -23,9 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
-
-
 // COIN FLIP
 
 var initRun = true;
@@ -44,7 +41,7 @@ var myimg = document.querySelector("#myimg");
 var result = document.querySelector("#result");
 
 // Écouteur d'événement pour le clic sur l'image
-myimg.addEventListener("click", function() {
+myimg.addEventListener("click", function () {
     counter = 1;
     toggler = false;
     degflag = false;
@@ -67,26 +64,22 @@ myimg.addEventListener("transitionend", function () {
             myimg.src = (myimg.src.includes(quheads)) ? qutails : quheads;
             myimg.style.transform = "rotateY(0deg)";
             degflag = false;
-        }
-        else {
+        } else {
             myimg.style.transform = "rotateY(89deg)";
             degflag = true;
         }
         counter += 1;
-    }
-    else {
+    } else {
         if (degflag && !enddegflag) {
             myimg.style.transform = "rotateY(0deg)";
             myimg.src = (myimg.src.includes(quheads)) ? qutails : quheads;
             enddegflag = true;
-        }
-        else {
+        } else {
             // Déterminer le résultat en fonction de l'image affichée
             if (myimg.src.includes(quheads)) {
                 result.innerHTML = "HEAD";
                 result.style.color = "#9400FF"; // Couleur pour face
-            }
-            else {
+            } else {
                 result.innerHTML = "TAIL";
                 result.style.color = "#cc0000"; // Couleur pour pile
             }
