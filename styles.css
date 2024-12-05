@@ -108,11 +108,6 @@ html body main .rules.active .block {
   width: 80vw;
   max-width: 500px;
 }
-html body main .rules.active .block .age {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 html body main .rules.active .block .sub-block {
   box-shadow: 1px 1px 10px #bdbdbd;
   padding: 1rem;
@@ -127,6 +122,11 @@ html body main .rules.active .block h3 {
 }
 html body main .rules.active .block h4 {
   font-size: 1rem;
+}
+html body main .rules.active .age {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 html body main .wiki.active {
   display: flex;
