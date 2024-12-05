@@ -164,6 +164,7 @@ html body main .cards.active img {
   width: 100%;
 }
 html body main .cards.active .card-list {
+  margin-top: 5rem;
   display: flex;
   width: 100%;
   flex-wrap: wrap;
