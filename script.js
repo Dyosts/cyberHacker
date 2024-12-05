@@ -86,3 +86,41 @@ myimg.addEventListener("transitionend", function () {
         }
     }
 }, false);
+
+// Sélectionner toutes les cartes
+const cards = document.querySelectorAll('.flip-card-inner');
+
+// Fonction pour appliquer la rotation en fonction du scroll
+function rotateCardsOnScroll() {
+    // Parcourir chaque carte et appliquer la rotation en fonction de sa position
+    cards.forEach((card) => {
+        // Obtenir la position de la carte par rapport à la fenêtre
+        const cardRect = card.getBoundingClientRect();
+        const cardTop = cardRect.top;
+        const cardBottom = cardRect.bottom;
+
+        // Calculer la position de la carte par rapport à la fenêtre visible
+        const windowHeight = window.innerHeight;
+
+        // La carte doit tourner en fonction de sa position
+        let rotationDegree = 0;
+
+        // Si la carte est dans la fenêtre de visualisation (visible ou partiellement)
+        if (cardTop < windowHeight && cardBottom > 0) {
+            // Calculer la proportion de la carte visible dans la fenêtre
+            const visibility = Math.min(1, Math.max(0, cardBottom / windowHeight));
+
+            // La rotation va de 0° (carte frontale visible) à 180° (carte arrière visible)
+            rotationDegree = visibility * 180;
+        }
+
+        // Appliquer la transformation de rotation
+        card.style.transform = `rotateY(${rotationDegree}deg)`;
+    });
+}
+
+// Écouter l'événement scroll
+window.addEventListener('scroll', rotateCardsOnScroll);
+
+// Appeler immédiatement la fonction pour mettre à jour les cartes au chargement de la page
+rotateCardsOnScroll();
