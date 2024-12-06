@@ -90,6 +90,8 @@ html body main section p {
   font-style: normal;
 }
 html body main #video {
+  width: 80vw;
+  max-width: 800px;
   margin-bottom: 1rem;
   border-radius: 10px;
   box-shadow: 1px 1px 1px #333;
