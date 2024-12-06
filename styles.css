@@ -21,7 +21,9 @@ html body .content-section.active {
   display: block;
 }
 html body header {
-  background: url("/assets/banner.png") no-repeat center center;
+  background-image: url("/assets/banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   color: #ffffff;
   padding: 10px 0;
