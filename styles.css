@@ -138,6 +138,9 @@ html body main .wiki.active article {
   border-radius: 10px;
   padding: 1rem;
   margin-bottom: 1rem;
+  width: 80vw;
+  max-width: 800px;
+  background-color: #ffffff;
 }
 html body main .coin {
   text-align: center;
