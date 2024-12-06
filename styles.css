@@ -89,6 +89,11 @@ html body main section p {
   font-weight: 300;
   font-style: normal;
 }
+html body main #video {
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #333;
+}
 html body main .rules.active {
   display: flex;
   flex-direction: column;
